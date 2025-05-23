@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet"
+    type="text/css" />
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" name="Brenda" placeholder="Informe seu nome...">
+        <br>
+        <div>
+            <label for="">Personagem:</label>
+            <br>
+            <input type="radio" checked value="seo yul" name="campo_personagem">Seo Yul <br>
+            <input type="radio" checked value="sa hye-jun"name="campo_personagem">Sa Hye-Jun <br>
+            <input type="radio" checked valeu="yeo jun"name="campo_personagem">Yeo Jun<br>
+        </div>
+
+        <div>
+            <label for="">Habilidades:</label>
+            <br>
+            <input type="checkbox" valeu="Alquimia_das_Almas" name="campo_habilidades">Alquimia das Almas<br>
+            <input type="checkbox" valeu="Pasarela_dos_sonhos" name="campo_habilidades">Pasarela dos Sonhos<br>
+            <input type="checkbox" valeu="Spring" name="campo_habilidades">At a Distance, Spring Is Green<br>
+        </div>
+
+        <div>
+            <label for="">Ano de lançamento:</label>
+            <Select name="campo_cor_favorita" id=""required>
+                <option valeu="2020">2020</option>
+                <option valeu="2021">2021</option>
+                <option valeu="2022">2022</option>
+
+            </Select>
+        </div>
+        <label for="">Avalição:</label>
+        <br>
+        <textarea rows="4" cols="50" name="mensagem"></textarea>
+        <br>
+        <input type="submit" valeu="enviar">
+
+    </form>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+
+    <script>
+        new FroalaEditor("textarea");
+</script>
+</body>
+</html>
