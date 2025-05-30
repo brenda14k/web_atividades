@@ -1,27 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-<body>
-    <form action="#" method="get">
-        <input type="number" min="0" max="10" name="campo_numero">
-        <input type="date"name="campo_data_ida">
-        <input type = "date" name="campo_data_volta">
-        <input type = "color" name="campo_cor">
-        <input type="submit" value="enviar dados do formulario">
+    <body>
+        <form action="" onsubmit=" return ProcessarFormulario()">
+            <input type="text" id="tarefa" placeholder="Informe uma tarefa...">
+            <input type="number" id="prioridade" placeholder="Informe uma prioridaqde...">
+            <input type="submit" value="enviar!">
 
-        <br><br>
-        <input
+        </form>
+        <h2>Tarefas Cadastradas</h2>
+        <ul id="tarefas-cadastradas"></ul>
 
-    </form>
 
-</body>
-</body>
-</body>
+        <script>
+                //allert(Uhulll!);
+                let listaTarefas = [];
 
-</html>
+                let tarefa_elem = document.querySelector("#tarefa");
+                let prioridade_elem = document.querySelector("#prioridade");
+                let ul_elem = document.querySelector("ul");
+
+               
+                
+
+                function ProcessarFormulario() {
+
+                    let tarefa = tarefa_elem.value.trim();
+                    let prioridade = prioridade_elem.value;
+
+                    if (tarefa === "") {
+                        alert("A tarefa não pode estar vazia");
+                        return false;
+                    }
+
+                    if(prioridade < 0 || prioridade > 10){
+                        alert ("Prioridade deve estar no intervalo de 0 á 10");
+                        return false;
+                    }
+                    listaTarefas.push(tarefa);
+                    const li = document.createElement("li");
+                    li.textContent = tarefa;
+                    ul_elem.appendChild(li);
+                    localStorage.setItem("Chave","Um valor que quero armazenar");
+                    localStorage.setItem("tarefa",tarefa);
+                    console.log(tarefa);
+                    return false;
+                }
+
+            </script>
+        </body>
+
+        </html>
